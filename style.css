@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #292532;
+  font-family: Georgia, "Times New Roman", serif;
+  background: linear-gradient(145deg, #f8d7dc 0%, #d9d3ef 48%, #c9e8e4 100%);
+}
+
+.home {
+  width: min(100% - 2rem, 760px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.business-card {
+  display: block;
+  width: min(100%, 560px);
+  aspect-ratio: 1.75 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgb(40 30 55 / 18%);
+  background: rgb(255 255 255 / 55%);
+}
+
+.updated {
+  margin: 1.25rem 0 2rem;
+  font-size: 0.95rem;
+}
+
+.icon-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.icon-link img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  padding: 0.65rem;
+  border-radius: 18px;
+  background: rgb(255 255 255 / 55%);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.icon-link:hover img,
+.icon-link:focus-visible img {
+  transform: translateY(-4px);
+  background: rgb(255 255 255 / 85%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 520px) {
+  .home {
+    padding: 2rem 0;
+  }
+
+  .icon-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
